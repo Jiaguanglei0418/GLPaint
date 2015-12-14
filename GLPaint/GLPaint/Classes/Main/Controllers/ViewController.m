@@ -57,7 +57,7 @@
 {
     // 获取照片
     UIImage *paintImage = [_paintView paintImage];
-    LogRed(@"%@", paintImage);
+//    LogRed(@"%@", paintImage);
     
     UIImageWriteToSavedPhotosAlbum(paintImage, self, @selector(imageSavedToPhotosAlbum:didFinishSavingWithError:contextInfo:), nil);
 }
@@ -114,10 +114,7 @@
     
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 #pragma mark - ColorPickerDelegate
 - (void)aColorPickerDidSelected:(UIColor *)color
 {
@@ -125,5 +122,8 @@
     
 }
 
-
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 @end

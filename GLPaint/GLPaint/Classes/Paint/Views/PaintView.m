@@ -121,7 +121,7 @@
         [self.currentLine setLineColor:self.paintColor];
         // 设置终点
         CGPoint loc = [touch locationInView:self];
-        LogGreen(@"%@ ---- ", NSStringFromCGPoint(loc));
+//        LogGreen(@"%@ ---- ", NSStringFromCGPoint(loc));
         [self.currentLine setEnd:loc];
         
         if(self.currentLine){

@@ -35,7 +35,6 @@
         
         // initial code
         _colors = [NSArray arrayWithObjects:[UIColor blackColor], [UIColor darkGrayColor],[UIColor lightGrayColor], [UIColor whiteColor], [UIColor grayColor], [UIColor redColor], [UIColor greenColor], [UIColor blueColor], [UIColor cyanColor], [UIColor yellowColor], [UIColor magentaColor], [UIColor orangeColor], [UIColor purpleColor], [UIColor brownColor], nil];
-       
         
         for (int i = 0; i < _colors.count; i++) {
             UIButton *picker = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -52,8 +51,13 @@
             // 监听点击
             [picker addTarget:self action:@selector(pickerMethod:) forControlEvents:UIControlEventTouchUpInside];
             
+            if (i == 0) {
+                [self pickerMethod:picker];
+            }
+            
             [self addSubview:picker];
         }
+        
     }
     return self;
 }
@@ -70,7 +74,7 @@
     
 //    _selectedPicker = picker;
     
-    LogRed(@"%@", [picker backgroundColor]);
+//    LogRed(@"%@", [picker backgroundColor]);
     
     _selectedPicker = picker;
     
